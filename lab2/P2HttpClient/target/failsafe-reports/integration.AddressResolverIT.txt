@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: integration.AddressResolverIT
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.071 s <<< FAILURE! - in integration.AddressResolverIT
+integration.AddressResolverIT.whenBadCoordidates_trhowBadArrayIndex  Time elapsed: 0.046 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.IndexOutOfBoundsException> but was: <java.lang.RuntimeException>
+	at P2HttpClient@1.0-SNAPSHOT/integration.AddressResolverIT.whenBadCoordidates_trhowBadArrayIndex(AddressResolverIT.java:37)
+Caused by: java.lang.RuntimeException: Unable to find config.properties
+	at P2HttpClient@1.0-SNAPSHOT/integration.AddressResolverIT.lambda$whenBadCoordidates_trhowBadArrayIndex$0(AddressResolverIT.java:37)
+	at P2HttpClient@1.0-SNAPSHOT/integration.AddressResolverIT.whenBadCoordidates_trhowBadArrayIndex(AddressResolverIT.java:37)
+
+integration.AddressResolverIT.whenGoodCoordidates_returnAddress  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.RuntimeException: Unable to find config.properties
+	at P2HttpClient@1.0-SNAPSHOT/integration.AddressResolverIT.whenGoodCoordidates_returnAddress(AddressResolverIT.java:30)
+
