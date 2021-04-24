@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Basic Arithmetic" time="0.237" tests="4" errors="4" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="15"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber/target/test-classes:/Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber/target/classes:/Users/isadoraloredo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/Users/isadoraloredo/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/isadoraloredo/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:/Users/isadoraloredo/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/isadoraloredo/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/Users/isadoraloredo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-java/6.10.3/cucumber-java-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-core/6.10.3/cucumber-core-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-gherkin/6.10.3/cucumber-gherkin-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.3/cucumber-gherkin-messages-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-plugin/6.10.3/cucumber-plugin-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/docstring/6.10.3/docstring-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-junit-platform-engine/6.10.3/cucumber-junit-platform-engine-6.10.3.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="15"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-15.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber/target/surefire/surefirebooter4818556448224375956.jar /Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber/target/surefire 2021-04-20T11-30-24_810-jvmRun1 surefire3275172616825608689tmp surefire_08040957205061358947tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber/target/test-classes:/Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber/target/classes:/Users/isadoraloredo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/Users/isadoraloredo/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/isadoraloredo/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:/Users/isadoraloredo/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/isadoraloredo/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/Users/isadoraloredo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-java/6.10.3/cucumber-java-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-core/6.10.3/cucumber-core-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-gherkin/6.10.3/cucumber-gherkin-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.3/cucumber-gherkin-messages-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-plugin/6.10.3/cucumber-plugin-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/docstring/6.10.3/docstring-6.10.3.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/isadoraloredo/.m2/repository/io/cucumber/cucumber-junit-platform-engine/6.10.3/cucumber-junit-platform-engine-6.10.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/isadoraloredo"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-09-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-15.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber/target/surefire/surefirebooter4818556448224375956.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="15+36-1562"/>
+    <property name="user.name" value="isadoraloredo"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/isadoraloredo/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/r1/4f82yxbj0y57n7r_v6xlzffc0000gn/T/"/>
+    <property name="java.version" value="15"/>
+    <property name="user.dir" value="/Users/isadoraloredo/Apps/TQSlabs/lab5/P1CucumberDemo/junit5-cucumber"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.library.path" value="/Users/isadoraloredo/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="15+36-1562"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="59.0"/>
+  </properties>
+  <testcase name="Addition - Trying hard" classname="Basic Arithmetic" time="0.221">
+    <error message="The step &apos;the result is 9&apos; is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@Then(&quot;the result is {int}&quot;)&#10;public void the_result_is(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'the result is 9' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the result is {int}")
+public void the_result_is(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[inicializando calc
+adicionando e funcionando
+adicionando nos steps
+]]></system-out>
+  </testcase>
+  <testcase name="Substraction - Trying enough" classname="Basic Arithmetic" time="0.004">
+    <error message="The step &apos;the result is 5&apos; is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@Then(&quot;the result is {int}&quot;)&#10;public void the_result_is(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'the result is 5' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the result is {int}")
+public void the_result_is(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[inicializando calc
+tirando e funcionando
+subtraindo nos steps
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1" classname="Single digits" time="0.005">
+    <error message="The step &apos;the result is 3&apos; is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@Then(&quot;the result is {int}&quot;)&#10;public void the_result_is(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'the result is 3' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the result is {int}")
+public void the_result_is(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[inicializando calc
+adicionando e funcionando
+adicionando nos steps
+]]></system-out>
+  </testcase>
+  <testcase name="Example #2" classname="Single digits" time="0.004">
+    <error message="The step &apos;the result is 10&apos; is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@Then(&quot;the result is {int}&quot;)&#10;public void the_result_is(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'the result is 10' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the result is {int}")
+public void the_result_is(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[inicializando calc
+adicionando e funcionando
+adicionando nos steps
+]]></system-out>
+  </testcase>
+</testsuite>

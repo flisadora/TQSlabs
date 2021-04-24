@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: Basic Arithmetic
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.237 s <<< FAILURE! - in Basic Arithmetic
+Addition - Trying hard  Time elapsed: 0.221 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'the result is 9' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the result is {int}")
+public void the_result_is(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Substraction - Trying enough  Time elapsed: 0.004 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'the result is 5' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the result is {int}")
+public void the_result_is(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Example #1  Time elapsed: 0.005 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'the result is 3' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the result is {int}")
+public void the_result_is(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Example #2  Time elapsed: 0.004 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'the result is 10' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the result is {int}")
+public void the_result_is(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
