@@ -79,7 +79,7 @@ public class AirPollutionController {
         String url = HOST_A + "city?city=" + city_name + "&state=" + city_name +
                 "&country=Portugal&key=" + API_KEY_A;
         JSONObject data;
-
+        System.out.println("URL-------------> "+url);
         try {
             data = this.requestApi(url);
         }
@@ -98,7 +98,7 @@ public class AirPollutionController {
         String API_KEY_B = "e7f3754334ee9670373a35ac58377e22";
         String HOST_B = "http://api.openweathermap.org/data/2.5/air_pollution?";
         url = HOST_B + "lat=" + lat + "&lon=" + lon + "&appid=" + API_KEY_B;
-        System.out.println(HOST_B);
+        System.out.println(url);
         try{
             data = this.requestApi(url);
         }catch (Exception e){
@@ -107,20 +107,20 @@ public class AirPollutionController {
 
         JSONArray list = (JSONArray) data.get("list");
         data = (JSONObject) list.get(0);
-        System.out.println(data.get("components").toString());
         JSONObject components = (JSONObject) data.get("components");
         data = (JSONObject) data.get("main");
+
 
         City new_city = this.airPollutionService.save(new City(city_name, lat, lon,
                 Integer.parseInt(data.get("aqi").toString()),
                 (double) components.get("co"),
-                components.get("no").length()==1 ? (double)(int) components.get("no") : (double) components.get("no"),
-                (double) components.get("no2"),
-                (double) components.get("o3"),
-                (double) components.get("so2"),
-                (double) components.get("pm2_5"),
-                (double) components.get("pm10"),
-                (double) components.get("nh3")
+                components.get("no").toString().length() == 1 ? (int) Integer.parseInt(components.get("no").toString()) : (double) components.get("no"),
+                components.get("no2").toString().length() == 1 ? (int) Integer.parseInt(components.get("no2").toString()) : (double) components.get("no2"),
+                components.get("o3").toString().length() == 1 ? (int) Integer.parseInt(components.get("o3").toString()) : (double) components.get("o3"),
+                components.get("so2").toString().length() == 1 ? (int) Integer.parseInt(components.get("so2").toString()) : (double) components.get("so2"),
+                components.get("pm2_5").toString().length() == 1 ? (int) Integer.parseInt(components.get("pm2_5").toString()) : (double) components.get("pm2_5"),
+                components.get("pm10").toString().length() == 1 ? (int) Integer.parseInt(components.get("pm10").toString()) : (double) components.get("pm10"),
+                components.get("nh3").toString().length() == 1 ? (int) Integer.parseInt(components.get("nh3").toString()) : (double) components.get("nh3")
         ));
 
         this.airPollutionService.countMisses();
