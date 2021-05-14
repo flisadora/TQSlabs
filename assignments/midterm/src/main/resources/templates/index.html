@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AirPollution</title>
+</head>
+<body>
+<h1>Air Pollution Data</h1>
+<label for="states">Choose a location:</label>
+<form th:action="@{/api/airpollution}"  method="post"> <!-- redirect -> th:action="@{/save}" -->
+    <select class="form-control" id="states" name="chosen_state">
+        <option th:each="state: ${states}" th:value="${state}" th:text="${state}"></option>
+    </select>
+    <button type="submit">Search</button>
+</form>
+<p th:text="${meunome}"></p>
+</body>
+</html>

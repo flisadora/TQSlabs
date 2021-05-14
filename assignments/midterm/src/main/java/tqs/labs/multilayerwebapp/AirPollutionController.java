@@ -37,7 +37,7 @@ public class AirPollutionController {
         return (JSONObject) parser.parse(response);
     }
 
-    @GetMapping(value="/air_pollution")
+    @GetMapping(value="/airpollution")
     public String start(Model model) throws ParseException{
         String url = HOST_A + "states?country=Portugal&key=" + API_KEY_A;
         JSONObject result = this.requestApi(url);
@@ -50,6 +50,7 @@ public class AirPollutionController {
             states.add((String) state.get("state"));
         }
         model.addAttribute("states",states);
+        model.addAttribute("meunome", "ISADORA");
         return "index";
     }
 
@@ -97,7 +98,7 @@ public class AirPollutionController {
         String API_KEY_B = "e7f3754334ee9670373a35ac58377e22";
         String HOST_B = "http://api.openweathermap.org/data/2.5/air_pollution?";
         url = HOST_B + "lat=" + lat + "&lon=" + lon + "&appid=" + API_KEY_B;
-
+        System.out.println(HOST_B);
         try{
             data = this.requestApi(url);
         }catch (Exception e){
@@ -113,7 +114,7 @@ public class AirPollutionController {
         City new_city = this.airPollutionService.save(new City(city_name, lat, lon,
                 Integer.parseInt(data.get("aqi").toString()),
                 (double) components.get("co"),
-                (double) components.get("no"),
+                components.get("no").length()==1 ? (double)(int) components.get("no") : (double) components.get("no"),
                 (double) components.get("no2"),
                 (double) components.get("o3"),
                 (double) components.get("so2"),
@@ -128,7 +129,7 @@ public class AirPollutionController {
     }
 
     @PostMapping(path="/airpollution")
-    public String airPOLLUTION(Model model, @RequestParam(name = "chosen_state") String chosen_state) throws ParseException, InterruptedException {
+    public String airPollution(Model model, @RequestParam(name = "chosen_state") String chosen_state) throws ParseException, InterruptedException {
         ResponseEntity<City> response = this.getCity(chosen_state);
         HttpStatus statuscode = response.getStatusCode();
 

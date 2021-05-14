@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AirPollution</title>
+</head>
+<body>
+<h1>Air Pollution</h1> <h1 id="city_name" th:text="${city.name}"></h1>
+<span id="error" th:if="${error != null}" th:text="${error}" style="color: red"></span>
+
+<p> <b>Current air pollution index: </b> <span id="air" th:text="${city.air_quality_index}"></span>% </p>
+<p> <b>Category: </b> <span id="category" th:text="${city.category}"></span></p>
+<p> <b>Carbon monoxide (CO): </b> <span id="carbon" th:text="${city.carbon}"></span></p>
+<p> <b>Nitrogen monoxide (NO): </b> <span id="nitrogenmono" th:text="${city.no}"></span></p>
+<p> <b>Nitrogen dioxide (NO2): </b> <span id="nitrogendio" th:text="${city.no2}"></span></p>
+<p> <b>Ozone (O3): </b> <span id="ozone" th:text="${city.o3}"></span></p>
+<p> <b>Sulphur dioxide (SO2): </b> <span id="sulphur" th:text="${city.so2}"></span></p>
+<p> <b>Fine particles matter (PM2_5): </b> <span id="fineparticles" th:text="${city.pm25}"></span></p>
+<p> <b>Coarse particulate matter (PM10): </b> <span id="coarseparticle" th:text="${city.pm10}"></span></p>
+<p> <b>Ammonia (NH3): </b> <span id="ammonia" th:text="${city.nh3}"></span></p>
+
+<button onclick="window.location='airpollution'">Voltar</button>
+</body>
+</html>
