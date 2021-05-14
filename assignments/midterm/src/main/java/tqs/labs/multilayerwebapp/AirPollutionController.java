@@ -16,8 +16,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
-
-import static java.lang.reflect.Array.getDouble;
 // documentation apis:
 // https://openweathermap.org/api/air-pollution
 
@@ -65,7 +63,7 @@ public class AirPollutionController {
         Calendar target_date = Calendar.getInstance();
         if (this.airPollutionService.exists(city_name)){
 
-            City target_city = this.airPollutionService.getAirQuality(city_name);
+            City target_city = this.airPollutionService.getAirPollution(city_name);
             Calendar requestDateTTL = target_city.getTimeOfRequest();
             requestDateTTL.add(Calendar.MINUTE, 1);
 
@@ -91,8 +89,8 @@ public class AirPollutionController {
         data = (JSONObject) data.get("data");
         data = (JSONObject) data.get("location");
         JSONArray coords = (JSONArray) data.get("coordinates");
-        double lat =  getDouble(coords,1);
-        double lon =  getDouble(coords, 0);
+        double lat = (double) coords.get(1);
+        double lon = (double) coords.get(0);
 
         //example url:
         //http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API key}
@@ -106,13 +104,15 @@ public class AirPollutionController {
             return new ResponseEntity<>(new City(), HttpStatus.NOT_FOUND);
         }
 
-        data = (JSONObject) data.get("list");
+        JSONArray list = (JSONArray) data.get("list");
+        data = (JSONObject) list.get(0);
+        System.out.println(data.get("components").toString());
         JSONObject components = (JSONObject) data.get("components");
         data = (JSONObject) data.get("main");
 
         City new_city = this.airPollutionService.save(new City(city_name, lat, lon,
-                (int) data.get("aqi"),
-                (double) components.get("carbon"),
+                Integer.parseInt(data.get("aqi").toString()),
+                (double) components.get("co"),
                 (double) components.get("no"),
                 (double) components.get("no2"),
                 (double) components.get("o3"),

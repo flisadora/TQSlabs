@@ -77,6 +77,10 @@ public class City {
 
     public double getCarbon() { return carbon; }
 
+    public double getNo() { return no; }
+
+    public double getNo2() { return no2; }
+
     public double getO3() { return o3; }
 
     public double getSo2() { return so2; }
@@ -86,10 +90,6 @@ public class City {
     public double getPm10() { return pm10; }
 
     public double getNh3() { return nh3; }
-
-    public double getNo() { return no; }
-
-    public double getNo2() { return no2; }
 
     public Calendar getTimeOfRequest(){
         return this.timeOfRequest;

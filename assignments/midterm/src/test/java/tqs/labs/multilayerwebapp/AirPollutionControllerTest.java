@@ -45,7 +45,17 @@ public class AirPollutionControllerTest {
         mvc.perform(get("/api/getCity?city_name=Braga").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is(braga.getName())))
                 .andExpect(jsonPath("$.lat", is(braga.getLat())))
-                .andExpect(jsonPath("$.lng", is(braga.getLng())));
+                .andExpect(jsonPath("$.lng", is(braga.getLng())))
+                .andExpect(jsonPath("$.air_quality_index", is(braga.getAir_quality_index())))
+                .andExpect(jsonPath("$.carbon", is(braga.getCarbon())))
+                .andExpect(jsonPath("$.no", is(braga.getNo())))
+                .andExpect(jsonPath("$.no2", is(braga.getNo2())))
+                .andExpect(jsonPath("$.o3", is(braga.getO3())))
+                .andExpect(jsonPath("$.so2", is(braga.getSo2())))
+                .andExpect(jsonPath("$.pm25", is(braga.getPm25())))
+                .andExpect(jsonPath("$.pm10", is(braga.getPm10())))
+                .andExpect(jsonPath("$.nh3", is(braga.getNh3())));
+
         verify(service, VerificationModeFactory.times(1)).save(Mockito.any());
         reset(service);
     }

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface AirPollutionService {
-    City getAirQuality(String name);
+    City getAirPollution(String name);
     City getCityById(Long id);
     boolean exists(String name);
     City save(City city);

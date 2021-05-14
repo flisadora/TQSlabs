@@ -16,7 +16,7 @@ public class AirPollutionServiceImpl implements AirPollutionService {
     private int misses = 0;
 
     @Override
-    public City getAirQuality(String name) {
+    public City getAirPollution(String name) {
         return this.cityRepository.findByName(name);
     }
 
