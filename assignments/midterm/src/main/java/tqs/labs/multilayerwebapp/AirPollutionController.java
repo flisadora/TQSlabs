@@ -50,7 +50,7 @@ public class AirPollutionController {
             states.add((String) state.get("state"));
         }
         model.addAttribute("states",states);
-        model.addAttribute("meunome", "ISADORA");
+        
         return "index";
     }
 

@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@TestPropertySource( locations = "application-integrationtest.properties")
+@TestPropertySource( locations = "application-tests.properties")
 @AutoConfigureTestDatabase
 public class AirPollutionControllerIT {
 
